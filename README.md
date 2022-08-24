@@ -2,7 +2,7 @@
 
 This is repository for reusable GitHub Actions.
 
-Insert the below code into the file <repository>/.github/workflows/master-push-actions.yml
+Insert the below code into the file \<repository\>/.github/workflows/master-push-actions.yml
   
 
 ```yaml
