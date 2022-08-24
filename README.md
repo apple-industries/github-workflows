@@ -6,7 +6,7 @@ Insert the below code into the file <repository>/.github/workflows/master-push-a
   
 
 ```yaml
-name: Tag and Release
+name: Master Push Actions
 on:
   push:
     branches:
