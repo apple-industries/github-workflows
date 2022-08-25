@@ -19,6 +19,7 @@ jobs:
     - name: Install GIT
       run: |
           # install GIT, as without it checkout would use REST API
+          sudo -s
           apt update
           apt install -y \
             git
