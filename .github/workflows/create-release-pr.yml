@@ -1,0 +1,28 @@
+name: Create Release Branch from Tag
+on:
+  workflow_call:
+  
+# This is how other workflows are intended to call this one
+#on:
+#  push:
+#    branches
+#     - develop
+#    tags:
+#      - 'r*'
+
+
+jobs:
+  release_pull_request:
+    runs-on: ubuntu-latest
+    name: release_pull_request
+    steps:
+    - name: checkout
+      uses: actions/checkout@v1
+    - name: Create PR to branch
+      uses: gorillio/github-action-cherry-pick@master
+      with:
+        pr_branch: 'master'
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        DRY_RUN: false
+      
