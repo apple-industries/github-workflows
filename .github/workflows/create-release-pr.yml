@@ -20,8 +20,8 @@ jobs:
       run: |
           # install GIT, as without it checkout would use REST API
           sudo -s
-          apt update
-          apt install -y \
+          apt-get update
+          apt-get install -y \
             git
     - name: checkout
       uses: actions/checkout@v1
