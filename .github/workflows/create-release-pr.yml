@@ -22,6 +22,7 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y \
             git
+          git config --global --add safe.directory /github/workspace
     - name: checkout
       uses: actions/checkout@v1
     - name: Set ownership
@@ -34,5 +35,6 @@ jobs:
         pr_branch: 'master'
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITBOT_EMAIL: <BOT_EMAIL>
         DRY_RUN: false
       
