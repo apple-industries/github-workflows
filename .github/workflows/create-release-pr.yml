@@ -16,6 +16,12 @@ jobs:
     runs-on: ubuntu-latest
     name: release_pull_request
     steps:
+    - name: Install GIT
+      run: |
+          # install GIT, as without it checkout would use REST API
+          apt update
+          apt install -y \
+            git
     - name: checkout
       uses: actions/checkout@v1
     - name: Create PR to branch
